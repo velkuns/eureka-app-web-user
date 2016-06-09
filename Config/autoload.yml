@@ -1,0 +1,7 @@
+# Autoloader config file
+
+all:
+
+  Eureka\Module\Web\User:
+    namespace: Eureka\Module\Web\User
+    path: __DIR__/..

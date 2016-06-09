@@ -1,0 +1,14 @@
+# Module\Web\User Config file
+
+all:
+  user:
+    controller: Eureka\Module\Web\User\Controller\User::account
+    route: /user/account
+
+  login:
+    controller: Eureka\Module\Web\User\Controller\User::login
+    route: /user/login
+
+  logout:
+    controller: Eureka\Module\Web\User\Controller\User::logout
+    route: /user/logout

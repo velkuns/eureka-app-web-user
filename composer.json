@@ -1,0 +1,28 @@
+{
+  "name": "eureka/module-web-user",
+  "description": "User app module",
+  "type": "library",
+  "license": "MIT",
+
+  "authors": [
+    {
+      "name": "Romain Cottard",
+      "email": "",
+      "role": "Developer"
+    }
+
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "Eureka\\App\\Web\\User": "./"
+    }
+  },
+
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/velkuns/eureka-app-web-user"
+    }
+  ]
+}
