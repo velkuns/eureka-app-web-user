@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Eureka\Module\Web\User\Component\Exception;
+namespace Eureka\Package\User\Component\Exception;
 
 /**
  * Login Exception

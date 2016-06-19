@@ -7,10 +7,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Eureka\Module\Web\User\DataMapper\Mapper\User;
+namespace Eureka\Package\User\DataMapper\Mapper\User;
 
-use Eureka\Module\Web\User\Component\Exception\LoginException;
-use Eureka\Module\Web\User\DataMapper\Data\User\User;
+use Eureka\Package\User\Component\Exception\LoginException;
+use Eureka\Package\User\DataMapper\Data\User\User;
 use Eureka\Component\Error\ExceptionNoData;
 use Eureka\Component\Http\Session;
 

@@ -1,2 +1,2 @@
-# eureka-app-web-user
-Framework User Web App
+# eureka-package-user
+Package User - For Eureka Framework

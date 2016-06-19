@@ -7,10 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Eureka\Module\Web\User\Controller;
+namespace Eureka\Package\User\Module\Common\Controller;
 
-use Eureka\Module\Web\User\Component\Exception\LoginException;
-use Eureka\Module\Web\User\DataMapper\Mapper\User\UserMapper;
+use Eureka\Component\Debug\Debug;
+use Eureka\Package\User\Component\Exception\LoginException;
+use Eureka\Package\User\DataMapper\Mapper\User\UserMapper;
+use Eureka\Package\User\DataMapper\Data;
 use Eureka\Component\Controller\Controller;
 use Eureka\Component\Database\Database;
 use Eureka\Component\Routing\RouteCollection;
@@ -20,7 +22,6 @@ use Eureka\Component\Response\Html\Template as ResponseTemplate;
 use Eureka\Component\Config\Config;
 use Eureka\Component\Response\ResponseInterface;
 use Eureka\Component\Http;
-use Eureka\Module\Web\User\DataMapper\Data;
 use Eureka\Component\Password\Password;
 
 /**
@@ -53,9 +54,11 @@ class User extends Controller
     {
         parent::runBefore();
 
-        $this->mainLayoutPath   = EKA_APP . '/Web/Layout/Layout/' . Config::getInstance()->get('Framework\Theme\php\theme');
-        $this->userLayoutPath   = __DIR__ . '/../Layout/' . Config::getInstance()->get('Framework\Theme\php\theme');
-        $this->userTemplatePath = __DIR__ . '/../Template/' . Config::getInstance()->get('Framework\Theme\php\theme');
+        $mainLayoutPath = Config::getInstance()->get('Eureka\Package\User\Theme\php\layout');
+        $mainTheme      = Config::getInstance()->get('Eureka\Package\User\Theme\php\theme');
+        $this->mainLayoutPath   = $mainLayoutPath . '/Layout/' . $mainTheme;
+        $this->userLayoutPath   = __DIR__ . '/../Layout/' . $mainTheme;
+        $this->userTemplatePath = __DIR__ . '/../Template/' . $mainTheme;
     }
 
     /**
@@ -77,7 +80,7 @@ class User extends Controller
      */
     public function login()
     {
-        $this->dataCollection->add('meta', Config::getInstance()->get('Framework\Meta'));
+        $this->dataCollection->add('meta', Config::getInstance()->get('Eureka\Package\User\Meta'));
 
         $hasError = false;
 
@@ -89,7 +92,7 @@ class User extends Controller
 
             try {
 
-                $userMapper = new UserMapper(Database::get());
+                $userMapper = new UserMapper(Database::get('user'));
 
                 $post = Http\Post::getInstance();
                 $user = $userMapper->findByEmail($email = $post->get('email'));
@@ -97,6 +100,7 @@ class User extends Controller
 
                 $session->set('id',    $user->getId());
                 $session->set('email', $user->getEmail());
+
 
                 $server->redirect('/');
 
@@ -149,7 +153,7 @@ class User extends Controller
     {
         $layout = new Template($layoutPath);
         $layout->setVar('content', $template->render());
-        $layout->setVar('meta', Config::getInstance()->get('Framework\Meta'));
+        $layout->setVar('meta', Config::getInstance()->get('Eureka\Package\User\Meta'));
 
         return $layout;
     }

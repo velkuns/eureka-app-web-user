@@ -7,10 +7,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Eureka\Module\Web\User\DataMapper\Data\User;
+namespace Eureka\Package\User\DataMapper\Data\User;
 
-use Eureka\Module\Web\User\Component\Exception\LoginException;
-use Eureka\Component\Debug\Debug;
+use Eureka\Package\User\Component\Exception\LoginException;
 use Eureka\Component\Password\Password;
 
 /**

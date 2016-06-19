@@ -2,6 +2,6 @@
 
 all:
 
-  Eureka\Module\Web\User:
-    namespace: Eureka\Module\Web\User
+  User:
+    namespace: Eureka\Package\User
     path: __DIR__/..

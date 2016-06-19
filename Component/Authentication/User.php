@@ -7,13 +7,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Eureka\Module\Web\User\Component\Authentication;
+namespace Eureka\Package\User\Component\Authentication;
 
-use Eureka\Module\Web\User\Component\Exception\LoginException;
-use Eureka\Module\Web\User\DataMapper\Mapper\User\UserMapper;
+use Eureka\Component\Debug\Debug;
+use Eureka\Package\User\Component\Exception\LoginException;
 use Eureka\Component\Database\Database;
 use Eureka\Component\Http;
-use Eureka\Module\Web\User\DataMapper\Data;
+use Eureka\Package\User\DataMapper\Data;
+use Eureka\Package\User\DataMapper\Mapper\User\UserMapper;
 use Eureka\Component\Routing\RouteCollection;
 
 /**

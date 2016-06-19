@@ -1,6 +1,6 @@
 {
-  "name": "eureka/module-web-user",
-  "description": "User app module",
+  "name": "eureka/package-money",
+  "description": "Money package.",
   "type": "library",
   "license": "MIT",
 
@@ -15,14 +15,43 @@
 
   "autoload": {
     "psr-4": {
-      "Eureka\\App\\Web\\User": "./"
+      "Eureka\\Package\\Money": "./"
     }
   },
 
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/velkuns/eureka-app-web-user"
+      "url": "https://github.com/velkuns/eureka-package-user"
     }
-  ]
+  ],
+
+  "require": {
+    //"eureka/component-acl": "dev-master",
+    "eureka/component-application": "dev-master",
+    "eureka/component-breadcrumb": "dev-master",
+    "eureka/component-cache": "dev-master",
+    "eureka/component-config": "dev-master",
+    "eureka/component-controller": "dev-master",
+    "eureka/component-currency": "dev-master",
+    "eureka/component-database": "dev-master",
+    //"eureka/component-debug": "dev-master",
+    "eureka/component-dependency": "dev-master",
+    "eureka/component-error": "dev-master",
+    "eureka/component-host": "dev-master",
+    "eureka/component-http": "dev-master",
+    "eureka/component-loader": "dev-master",
+    //"eureka/component-mcrypt": "dev-master",
+    "eureka/component-menu": "dev-master",
+    "eureka/component-notification": "dev-master",
+    //"eureka/component-orm": "dev-master",
+    "eureka/component-password": "dev-master",
+    "eureka/component-response": "dev-master",
+    "eureka/component-routing": "dev-master",
+    "eureka/component-string": "dev-master",
+    "eureka/component-template": "dev-master",
+    "eureka/component-timer": "dev-master",
+    //"eureka/component-token": "dev-master",
+    "eureka/component-yaml": "dev-master"
+  }
 }
