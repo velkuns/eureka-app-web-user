@@ -1,13 +1,13 @@
 {
-  "name": "eureka/package-money",
-  "description": "Money package.",
+  "name": "eureka/package-user",
+  "description": "Money user.",
   "type": "library",
   "license": "MIT",
 
   "authors": [
     {
       "name": "Romain Cottard",
-      "email": "",
+      "email": "no-reply@gmail.com",
       "role": "Developer"
     }
 
@@ -15,43 +15,47 @@
 
   "autoload": {
     "psr-4": {
-      "Eureka\\Package\\Money": "./"
+      "Eureka\\Package\\User\\": "./"
     }
   },
 
   "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/velkuns/eureka-package-user"
-    }
+    { "type": "vcs", "url": "https://github.com/velkuns/component-acl" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-application" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-breadcrumb" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-cache" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-config" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-controller" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-currency" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-database" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-debug" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-dependency" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-error" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-host" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-http" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-loader" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-mcrypt" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-menu" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-notification" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-orm" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-password" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-menu" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-response" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-routing" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-string" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-template" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-timer" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-token" },
+    { "type": "vcs", "url": "https://github.com/velkuns/component-yaml" }
   ],
 
   "require": {
-    //"eureka/component-acl": "dev-master",
-    "eureka/component-application": "dev-master",
     "eureka/component-breadcrumb": "dev-master",
-    "eureka/component-cache": "dev-master",
-    "eureka/component-config": "dev-master",
-    "eureka/component-controller": "dev-master",
-    "eureka/component-currency": "dev-master",
     "eureka/component-database": "dev-master",
-    //"eureka/component-debug": "dev-master",
     "eureka/component-dependency": "dev-master",
-    "eureka/component-error": "dev-master",
-    "eureka/component-host": "dev-master",
-    "eureka/component-http": "dev-master",
-    "eureka/component-loader": "dev-master",
-    //"eureka/component-mcrypt": "dev-master",
     "eureka/component-menu": "dev-master",
     "eureka/component-notification": "dev-master",
-    //"eureka/component-orm": "dev-master",
     "eureka/component-password": "dev-master",
-    "eureka/component-response": "dev-master",
-    "eureka/component-routing": "dev-master",
-    "eureka/component-string": "dev-master",
-    "eureka/component-template": "dev-master",
-    "eureka/component-timer": "dev-master",
-    //"eureka/component-token": "dev-master",
-    "eureka/component-yaml": "dev-master"
+    "eureka/component-string": "dev-master"
   }
 }
