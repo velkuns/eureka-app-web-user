@@ -18,36 +18,6 @@
     }
   },
 
-  "repositories": [
-    { "type": "vcs", "url": "https://github.com/velkuns/component-acl" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-application" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-breadcrumb" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-cache" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-config" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-controller" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-currency" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-database" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-debug" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-dependency" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-error" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-host" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-http" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-loader" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-mcrypt" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-menu" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-notification" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-orm" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-password" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-menu" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-response" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-routing" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-string" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-template" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-timer" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-token" },
-    { "type": "vcs", "url": "https://github.com/velkuns/component-yaml" }
-  ],
-
   "require": {
     "eureka/component-breadcrumb": "dev-master",
     "eureka/component-database": "dev-master",
