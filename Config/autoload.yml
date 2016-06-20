@@ -1,7 +1,0 @@
-# Autoloader config file
-
-all:
-
-  User:
-    namespace: Eureka\Package\User
-    path: __DIR__/..

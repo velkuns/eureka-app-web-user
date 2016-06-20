@@ -54,8 +54,8 @@ class User extends Controller
     {
         parent::runBefore();
 
-        $mainLayoutPath = Config::getInstance()->get('Eureka\Package\User\Theme\php\layout');
-        $mainTheme      = Config::getInstance()->get('Eureka\Package\User\Theme\php\theme');
+        $mainLayoutPath = Config::getInstance()->get('Eureka\Global\Theme\php\layout');
+        $mainTheme      = Config::getInstance()->get('Eureka\Global\Theme\php\theme');
         $this->mainLayoutPath   = $mainLayoutPath . '/Layout/' . $mainTheme;
         $this->userLayoutPath   = __DIR__ . '/../Layout/' . $mainTheme;
         $this->userTemplatePath = __DIR__ . '/../Template/' . $mainTheme;
@@ -80,7 +80,7 @@ class User extends Controller
      */
     public function login()
     {
-        $this->dataCollection->add('meta', Config::getInstance()->get('Eureka\Package\User\Meta'));
+        $this->dataCollection->add('meta', Config::getInstance()->get('Eureka\Global\Meta'));
 
         $hasError = false;
 
@@ -153,7 +153,7 @@ class User extends Controller
     {
         $layout = new Template($layoutPath);
         $layout->setVar('content', $template->render());
-        $layout->setVar('meta', Config::getInstance()->get('Eureka\Package\User\Meta'));
+        $layout->setVar('meta', Config::getInstance()->get('Eureka\Global\Meta'));
 
         return $layout;
     }
