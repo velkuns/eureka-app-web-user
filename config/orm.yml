@@ -1,0 +1,61 @@
+# ORM Config file
+
+orm:
+  directory: ../DataMapper/
+  namespace: Eureka\Package\User\DataMapper\
+  comment:
+    author: Romain Cottard
+    version: 1.0.0
+
+configs:
+
+# USER
+  user:
+    class:
+      classname: User
+      namespace: User
+    cache:
+      name: user
+      prefix: user
+    db:
+      prefix: user
+      config: user
+      table: user_user
+
+
+# ACL
+#  user_acl_resource:
+#    class:
+#      classname: Resource
+#      namespace: Acl
+#    cache:
+#      name: acl
+#      prefix: acl_resource
+#    db:
+#      prefix: user_acl_resource
+#      config: user
+#      table: user_acl_resource
+
+#  user_acl_role:
+#    class:
+#      classname: Role
+#      namespace: Acl
+#    cache:
+#      name: acl
+#      prefix: acl_role
+#    db:
+#      prefix: user_acl_role
+#      config: user
+#      table: user_acl_role
+
+#  user_acl_right:
+#    class:
+#      classname: Right
+#      namespace: Acl
+#    cache:
+#      name: acl
+#      prefix: acl_right
+#    db:
+#      prefix: user_acl_right
+#      config: user
+#      table: user_acl_right

@@ -1,0 +1,25 @@
+##
+# Copyright (c) 2010-2016 Romain Cottard
+#
+# For the full copyright and license information, please view the LICENSE
+# file that was distributed with this source code.
+##
+
+# Databases config file
+
+all:
+  user:
+    engine: PDO
+    dsn:    mysql:dbname=money;host=localhost
+    options:
+      PDO::MYSQL_ATTR_INIT_COMMAND: SET NAMES 'UTF8'
+
+dev:
+  user:
+    user:   web
+    pass:   webpass
+
+prod:
+  user:
+    user:   web
+    pass:   webpass
