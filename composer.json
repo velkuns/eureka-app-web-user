@@ -17,6 +17,8 @@
     }
   },
 
+  "minimum-stability": "dev",
+
   "require": {
     "eureka/component-breadcrumb": "dev-master",
     "eureka/component-database": "dev-master",
