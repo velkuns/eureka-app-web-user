@@ -13,19 +13,19 @@
 
   "autoload": {
     "psr-4": {
-      "Eureka\\Package\\User\\": "./"
+      "Eureka\\Package\\User\\": "./src/User/"
     }
   },
 
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
 
   "require": {
-    "eureka/component-breadcrumb": "dev-master",
-    "eureka/component-database": "dev-master",
-    "eureka/component-dependency": "dev-master",
-    "eureka/component-menu": "dev-master",
-    "eureka/component-notification": "dev-master",
-    "eureka/component-password": "dev-master",
-    "eureka/component-string": "dev-master"
+    "eureka/component-breadcrumb": "^1.0.0",
+    "eureka/component-database": "^1.0.1",
+    "eureka/component-dependency": "^1.0.0",
+    "eureka/component-menu": "^1.0.0",
+    "eureka/component-notification": "^1.0.0",
+    "eureka/component-password": "^1.0.0",
+    "eureka/component-string": "^1.0.0"
   }
 }
