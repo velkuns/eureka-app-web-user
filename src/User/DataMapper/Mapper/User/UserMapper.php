@@ -11,7 +11,7 @@ namespace Eureka\Package\User\DataMapper\Mapper\User;
 
 use Eureka\Package\User\Component\Exception\LoginException;
 use Eureka\Package\User\DataMapper\Data\User\User;
-use Eureka\Component\Error\ExceptionNoData;
+use Eureka\Component\Database\ExceptionNoData;
 use Eureka\Component\Http\Session;
 
 /**
