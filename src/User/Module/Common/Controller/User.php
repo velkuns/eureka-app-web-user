@@ -120,7 +120,7 @@ class User extends Controller
     /**
      * User logout controller action.
      *
-     * @return Template
+     * @return void
      */
     public function logout()
     {
@@ -137,7 +137,7 @@ class User extends Controller
     protected function getResponse($templateName)
     {
         $this->response = new ResponseTemplate();
-        $this->response->setHttpCode(200)->setContent($this->getLayout($this->getTemplate($templateName), $this->getThemeLayoutPath()));
+        $this->response->setHttpCode(200)->setContent($this->getLayout($this->getTemplate($templateName)));
 
         return $this->response;
     }
@@ -146,12 +146,12 @@ class User extends Controller
      * Get Main layout template
      *
      * @param  TemplateInterface $template
-     * @param  string            $layoutPath
      * @return Template
      */
-    protected function getLayout(TemplateInterface $template, $layoutPath)
+    protected function getLayout(TemplateInterface $template)
     {
-        $layout = new Template($layoutPath);
+        $layout = new Template($this->getThemeLayoutTemplate());
+
         $layout->setVar('content', $template->render());
         $layout->setVar('meta', Config::getInstance()->get('Eureka\Global\Meta'));
 
