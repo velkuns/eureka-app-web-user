@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (c) 2010-2016 Romain Cottard
+ * Copyright (c) Romain Cottard
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -28,7 +28,6 @@ use Eureka\Component\Password\Password;
  * Controller class
  *
  * @author Romain Cottard
- * @version 2.1.0
  */
 class User extends Controller
 {
@@ -113,7 +112,9 @@ class User extends Controller
         $this->dataCollection->add('email', $email);
         $this->dataCollection->add('hasError', $hasError);
 
-        return $this->getResponse('Login', $this->userLayoutPath . '/Login');
+        $this->setThemeLayoutTemplate($this->userLayoutPath . '/Login');
+
+        return $this->getResponse('Login');
     }
 
     /**
@@ -131,13 +132,12 @@ class User extends Controller
      * Get Response object
      *
      * @param  string $templateName
-     * @param  string $layoutPath
      * @return ResponseInterface
      */
-    protected function getResponse($templateName, $layoutPath)
+    protected function getResponse($templateName)
     {
         $this->response = new ResponseTemplate();
-        $this->response->setHttpCode(200)->setContent($this->getLayout($this->getTemplate($templateName), $layoutPath));
+        $this->response->setHttpCode(200)->setContent($this->getLayout($this->getTemplate($templateName), $this->getThemeLayoutPath()));
 
         return $this->response;
     }
